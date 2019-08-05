@@ -21,6 +21,7 @@ public class SmokeTest extends TestBase {
         pages.dashboardPage().navigateToModule("Dashboards", "Manage Dashboards");
         Assert.assertEquals(pages.dashboardPage().getPageSubTitle(), "All Manage Dashboards");
         extentLogger.pass("Verified that Manage Dashboards page opens");
+
     }
 
     @Test(groups= {"smoke"})
