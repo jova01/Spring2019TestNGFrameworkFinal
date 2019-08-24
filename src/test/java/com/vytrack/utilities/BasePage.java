@@ -1,4 +1,5 @@
 package com.vytrack.utilities;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -46,12 +47,13 @@ public abstract class BasePage {
      */
     public void waitUntilLoaderScreenDisappear() {
         try {
-            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 5);
+            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
             wait.until(ExpectedConditions.invisibilityOf(loaderMask));
         } catch (Exception e) {
             logger.error("Loader mask doesn't present.");
             System.out.println("Loader mask doesn't present.");
         }
+
     }
 
     /**

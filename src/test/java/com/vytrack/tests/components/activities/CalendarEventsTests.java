@@ -20,6 +20,8 @@ public class CalendarEventsTests extends TestBase {
 
         pages.dashboardPage().navigateToModule("Activities", "Calendar Events");
 
+
+
         //deselect title option from grid settings
         pages.calendarEventsPage().selectGridSetting("Title", false);
         BrowserUtils.waitPlease(3);
